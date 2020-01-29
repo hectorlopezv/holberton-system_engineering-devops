@@ -1,0 +1,31 @@
+#!/bin/bash
+mkdir holberton-system_engineering-devops
+cd holberton-system_engineering-devops
+hub init
+hub create 
+echo "hola como" >> README.md
+mkdir 0x00-shell_basics
+cd 0x00-shell_basics
+echo " try to do stuf here" >> README.md
+touch 0-current_working_directory
+touch 1-listit
+touch 2-bring_me_home
+touch 3-listfiles
+touch 4-listmorefiles
+touch 5-listfilesdigitonly
+touch 6-firstdirectory
+touch 7-movethatfile
+touch 8-firstdelete
+touch 9-firstdirdeletion
+touch 10-back
+touch 11-list
+touch 12-file_type
+touch 13-symbolic_link
+touch 14-copy_html
+touch 15-lets_move
+touch 16-clean_emacs
+touch 17-tree
+touch 18-commas
+git add *
+git commit -m "my first commit"
+git push -u origin master
