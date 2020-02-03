@@ -1,2 +1,2 @@
 #!/bin/bash
-find -type d -maxdepth 1 -exec wc -l {} +
+find -type d -maxdepth 1 .  -exec wc -l {} +
