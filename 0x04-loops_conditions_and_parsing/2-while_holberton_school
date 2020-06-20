@@ -3,7 +3,7 @@
 STRING="Holberton School"
 NUMBER=1
 
-until [ $NUMBER -gt 10 ]
+while [ $NUMBER -le 10 ]
 do
 	echo "$STRING"
 	((NUMBER++))
