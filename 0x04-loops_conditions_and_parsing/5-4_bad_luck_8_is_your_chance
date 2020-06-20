@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#display ceratin message depending on condition
+
+NUMBER=1
+while [ $NUMBER -le 10 ]
+do
+	if [ $NUMBER -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ $NUMBER -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+
+	((NUMBER++))
+done
