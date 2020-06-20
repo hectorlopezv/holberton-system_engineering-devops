@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#how to use case stamente or switch in other words
+
+NUMBER=1
+while [ $NUMBER -le 20 ]
+do
+	case $NUMBER in
+		4)
+			echo "$NUMBER"
+			echo "bad luck from China"
+			;;
+		9)
+			echo "$NUMBER"
+			echo "bad luck from Japan"
+			;;
+		17)
+			echo "$NUMBER"
+			echo "bad luck from Italy"
+			;;
+		*)
+			echo "$NUMBER"
+			;;
+	esac
+
+	((NUMBER++))
+done
+
