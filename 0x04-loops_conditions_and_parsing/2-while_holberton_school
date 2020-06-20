@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 #Print a string n times using until
-
 STRING="Holberton School"
 NUMBER=1
 
 until [ $NUMBER -gt 10 ]
 do
 	echo "$STRING"
-	#number=$($NUMBER+1)
 	((NUMBER++))
 done
 
