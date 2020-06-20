@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Print a string n times using until
+# this script is displaying "Holberton School" 10 times
 STRING="Holberton School"
 NUMBER=1
 
