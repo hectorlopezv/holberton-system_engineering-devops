@@ -1,0 +1,1 @@
+bash basics for automation
