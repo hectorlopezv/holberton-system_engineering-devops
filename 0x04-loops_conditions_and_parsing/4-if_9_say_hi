@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#this is exercise number 4 use of if statemnet in bash
+
+STRING="Holberton School"
+NUMBER=1
+while [ $NUMBER -le 10 ]
+do
+	echo "$STRING"
+	if [ $NUMBER -eq 9 ]
+	then
+		echo "Hi"
+	fi
+	((NUMBER++))
+done
