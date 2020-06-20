@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#script for ls exercise 8
+
+OUTPUT_LS=$(ls -1)
+
+for var in $OUTPUT_LS
+do
+	echo "${var#*-}"
+
+done
