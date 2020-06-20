@@ -4,7 +4,7 @@
 HOUR=-1
 MINUTES=0
 
-while [ $((HOUR++)) -le 12 ]
+while [ $((HOUR++)) -le 11 ]
 do
 	echo "Hour: $HOUR"
 	while [ $((MINUTES++)) -lt 59 ]
