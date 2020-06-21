@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+#to File or not to file
+
+if [[ -e holbertonschool ]]
+then
+	echo "holbertonschool file exists"
+	if [[ -s holbertonschool ]]
+	then
+		echo "holbertonschool file is not empty"
+	else
+		echo "holbertonschool file is empty"
+	fi
+	if [[ -f holbertonschool ]]
+	then
+		echo "holbertonschool is regular file"
+	fi
+
+else
+	echo "holbertonschool file does not exists"
+fi
