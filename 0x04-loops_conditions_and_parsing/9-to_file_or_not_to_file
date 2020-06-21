@@ -8,11 +8,11 @@ then
 	then
 		echo "holbertonschool file is not empty"
 	else
-		echo "holbertonschool file is empty"
+		echo "holbertonschool file is emptyy"
 	fi
 	if [[ -f holbertonschool ]]
 	then
-		echo "holbertonschool is regular file"
+		echo "holbertonschool is a regular file"
 	fi
 
 else
