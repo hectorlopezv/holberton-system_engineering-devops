@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#use of read and cut in bash to read input
+
+while IFS= read -r line || [[ -n $line ]] 
+do 
+	STR1=$(cut -d ':' -f 1 <<< "$line")
+	STR2=$(cut -d ':' -f 3 <<< "$line")
+	STR3=$(cut -d ':' -f  6  <<< "$line")
+
+	echo "$STR1:$STR2:$STR3"
+done </etc/passwd
