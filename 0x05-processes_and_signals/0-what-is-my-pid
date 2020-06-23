@@ -1,4 +1,4 @@
-#!/usr/bin/env Bash
+#!/usr/bin/env bash
 #exercise 0
 
 echo "$$"
