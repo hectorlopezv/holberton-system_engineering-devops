@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#highlander
+STRING="To infinity and beyond"
+trap 'echo "I am invincible!!!"' 15
+while :
+do
+	echo "$STRING"
+	sleep 2
+done
