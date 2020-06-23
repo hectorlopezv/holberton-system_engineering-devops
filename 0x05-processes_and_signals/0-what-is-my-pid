@@ -1,0 +1,5 @@
+#!/usr/bin/env Bash
+#exercise 0
+
+echo "$$"
+
