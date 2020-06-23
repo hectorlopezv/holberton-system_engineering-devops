@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#exercise 2
+#shellcheck disable=SC2009
+ps aufx |grep bash
