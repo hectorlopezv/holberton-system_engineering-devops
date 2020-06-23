@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#4 exercise
+STR="To infinity and beyond"
+while :
+do
+	echo "$STR"
+	sleep 2
+done
