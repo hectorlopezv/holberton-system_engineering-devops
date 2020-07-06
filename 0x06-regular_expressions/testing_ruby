@@ -1,0 +1,70 @@
+#!/usr/bin/ruby
+
+var_ = "Table of Contents"
+chap_ = "chapter "
+pag_ = "page"
+
+puts var_.center 80
+puts ''
+puts 'Chapter 1:  Numbers'.rjust(35)  + 'page 1'.rjust(25)
+puts 'Chapter 2:  Letters'.rjust(35)  + 'page 1'.rjust(25)
+puts 'Chapter 3:  Variables'.rjust(37)  + 'page 2'.rjust(23)
+puts rand
+puts rand(1000)
+
+#flows
+puts 1 == 1
+puts 2 != 1
+name = gets.chomp
+
+if name == 'chris'
+    puts 'metiste crhis perfecto'
+    name_ = gets.chomp
+    if name_ == 'hector'
+        puts 'hola hermano'
+    end
+else 
+    puts 'hey bro tiene que meter cris'
+end
+
+
+command = ''
+while command != 'eof'
+    puts 'Enter command'
+    command = gets.chomp
+end
+
+puts 'end of while loop'
+
+var =  [89.9, "hector", [true , false]]
+puts var
+langu = ['english', 'german', 'colombia']
+
+langu.each do |el|
+    puts el
+end
+=begin
+var_ = 'hector'
+print var_.length
+puts ''
+puts var_.length.to_s
+
+print var_.upcase 
+puts ''
+print var_.reverse 
+puts ''
+p var_.reverse
+
+puts 'hola cual es tu nombre'
+num = gets.chomp
+puts 'hola el numero es:' + num
+name = gets
+puts 'hola soy hector provando ' + name.upcase
+print "hello world\n"
+puts 1.0 + 2.0
+puts 'Hello, World!'
+puts ''
+puts 'hector'
+puts 'I like' + 'apple pie'
+puts 'blink ' * 4
+=end
