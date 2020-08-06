@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#login from client whiout password
+
+Host *
+	IdentityFile ~/.ssh/holberton	
