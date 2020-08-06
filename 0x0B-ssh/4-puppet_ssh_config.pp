@@ -2,7 +2,9 @@
 
 file {'ssh_config':
   ensure  => 'file',
-  content => 'Host * 
-    IdentityFile ~/.ssh/holberton',
-    path    => '~/etc/ssh/ssh_config',
+  content => '
+    Host * 
+    IdentityFile ~/.ssh/holberton
+    PasswordAuthentication no',
+    path    => '/etc/ssh/ssh_config',
 }
