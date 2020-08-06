@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#login from client whiout password
-
-Host *
-	IdentityFile ~/.ssh/holberton	
+# Login from the client to the server without password
+Host * 
+    IdentityFile ~/.ssh/holberton
