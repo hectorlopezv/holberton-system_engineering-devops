@@ -4,5 +4,5 @@ file {'ssh_config':
   ensure  => 'file',
   content => 'Host * 
     IdentityFile ~/.ssh/holberton',
-    path    => '/etc/ssh/ssh_config',
+    path    => '~/etc/ssh/ssh_config',
 }
