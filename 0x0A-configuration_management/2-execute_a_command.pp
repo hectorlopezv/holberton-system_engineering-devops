@@ -1,8 +1,6 @@
-#using exe manifest to stop a running process
-
-exec {
-  'killmenow':
-  command => 'pkill killmenow',
-  user    => 'root',
-
+#stop process but better use BOLT
+exec { 'killmenow':
+command  => 'pkill killmenow',
+provider => 'shell',
+path     => '/usr/bin',
 }
