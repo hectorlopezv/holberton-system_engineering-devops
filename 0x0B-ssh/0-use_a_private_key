@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#hello this is how to establish a connection using ssh
+ssh ubuntu@35.237.246.159
