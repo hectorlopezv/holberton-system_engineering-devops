@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 #how to install nginx on the web server
-sudo apt install nginx -y
-sudo echo "<html> <body>Holberton School</body></html>" > /var/www/html/index.html
-sudo service nginx restart
+
+sudo apt-get update
+sudo apt-get -y install nginx
+echo 'Holberton School' > /var/www/html/index.html
+service nginx restart
