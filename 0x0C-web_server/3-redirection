@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Serve a web page using nginx
+apt -y update
+apt -y upgrade
+apt install -y nginx
+ufw allow 'Nginx HTTP'
+STR="         location /redirect_me
+        {
+                return 301 https://www.youtube.com;
+
+        }"
+sed "s/server_name _/ "$STR"/g" /etc/nginx/sites-available/default
+service nginx restart
