@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-# Serve a web page using nginx
-apt -y update
-apt -y upgrade
+# nginx static server redirect
+apt update -y
 apt install -y nginx
-ufw allow 'Nginx HTTP'
 echo "Holberton School" > /var/www/html/index.html
 STR="         location /redirect_me
         {
