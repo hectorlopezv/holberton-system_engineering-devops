@@ -2,4 +2,4 @@
 #how to install nginx on the web server
 sudo apt install nginx -y
 sudo echo "<html> <body>Holberton School</body></html>" > /var/www/html/index.html
-sudo service nginx start
+sudo service nginx restart
