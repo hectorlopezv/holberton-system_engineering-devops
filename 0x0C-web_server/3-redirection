@@ -10,5 +10,5 @@ STR="         location /redirect_me
                 return 301 https://www.youtube.com;
 
         }"
-sed -i "s/server_name _/ "$STR"/g" /etc/nginx/sites-available/default
+sed -i "s/server_name _/ $STR/g" /etc/nginx/sites-available/default
 service nginx restart
