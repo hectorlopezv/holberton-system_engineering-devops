@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-#how to install nginx on the web server
-
+# This scripts installs nginx in a new ubuntu machine.
 sudo apt-get update
 sudo apt-get -y install nginx
 echo 'Holberton School' > /var/www/html/index.html
