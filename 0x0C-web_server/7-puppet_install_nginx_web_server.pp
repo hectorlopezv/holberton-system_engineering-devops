@@ -1,4 +1,5 @@
 
+#hpow to use install nginx and start service and some file
 package 
 {
   'nginx':
