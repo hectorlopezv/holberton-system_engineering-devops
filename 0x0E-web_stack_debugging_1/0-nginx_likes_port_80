@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Config server nginx for run service
+file_src='/etc/nginx/sites-available/default'
+file_dst='/etc/nginx/sites-enabled/default'
+sudo rm "$file_dst"
+ln -s "$file_src" "$file_dst"
+service nginx restart

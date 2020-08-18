@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Fixing nginx webserver stopped (web stack debugging).
+sudo rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo pkill -1 -f "/usr/sbin/nginx" # killing master proccess.
