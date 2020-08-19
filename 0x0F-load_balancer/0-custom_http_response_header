@@ -1,0 +1,4 @@
+#usr/bin/env bash
+#double the number of server by adding x-serverd-by headers to identify which webserver is 
+
+sed  '/}/a add_header X-Served-By "$hostname"' input
