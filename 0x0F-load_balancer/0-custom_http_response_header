@@ -1,4 +1,4 @@
-#usr/bin/env bash
+#!usr/bin/env bash
 #double the number of server by adding x-serverd-by headers to identify which webserver is 
 apt -y update
 apt -y upgrade
