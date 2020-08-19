@@ -19,4 +19,4 @@ STR="         location /redirect_me
         "
 sed -i "s/server_name _/ $STR/g" /etc/nginx/sites-available/default
 sed  '/}/a add_header X-Served-By "$hostname"' /etc/nginx/sites-available/default
-nginx -s reload
+service nginx restart
