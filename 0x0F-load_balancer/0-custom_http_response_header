@@ -6,11 +6,13 @@ apt install -y nginx
 ufw allow 'Nginx HTTP'
 echo "<html><body>Holberton School</body></html>" > /var/www/html/index.html
 echo "Holberton School" > /var/www/html/index.html
+
 STR="         location /redirect_me
         {
                 return 301 https://www.youtube.com;
 
         }
+        rewrite ^/redirect_me http://www.youtube.com permanent;
         error_page 404 /404.html;
         location = /404.html 
         {
