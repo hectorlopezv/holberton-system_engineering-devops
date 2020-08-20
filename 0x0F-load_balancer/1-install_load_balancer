@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 #double the number of server by adding x-serverd-by headers to identify which webserver is 
-add-apt-repository ppa:vbernat/haproxy-2.1 --yes
 apt update -y
 apt upgrade -y
-apt-cache policy haproxy -y
 apt install haproxy -y
 cd ~
 mkdir config
-cd config/
+source cd config/
 echo "frontend http80
     bind *:80
     timeout client 60s
@@ -20,4 +18,4 @@ backend allservers
     mode http
     server web-01 34.74.33.180:80
     server web-01 34.224.32.83:80" >> config.cfg
-haproxy -d -f config.cfg
+haproxy -D -f config.cfg
