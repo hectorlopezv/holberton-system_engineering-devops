@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#get dns record of domain
+DOMAIN="$1"
+SUBDOMAIN="$2"
+
+
+if [[ -z $SUBDOMAIN ]]
+then
+    awk '{if(NR==13) printf "The subdomain www is a %s record and points to %s\n", $4,$5;}' <(dig "www.$DOMAIN")
+    awk '{if(NR==13) printf "The subdomain lb-01 is a %s record and points to %s\n", $4,$5;}' <(dig "lb-01.$DOMAIN")
+    awk '{if(NR==13) printf "The subdomain web-01 is a %s record and points to %s\n", $4,$5;}' <(dig "web-01.$DOMAIN")
+    awk '{if(NR==13) printf "The subdomain web-02 is a %s record and points to %s\n", $4,$5;}' <(dig "web-02.$DOMAIN")
+elif [[ "$SUBDOMAIN" == "web-02" ]]
+then
+   awk '{if(NR==13) printf "The subdomain web-02 is a %s record and points to %s\n", $4,$5;}' <(dig "${SUBDOMAIN}.${DOMAIN}")
+elif [[ "$SUBDOMAIN" == "web-01" ]]
+then
+   awk '{if(NR==13) printf "The subdomain web-01 is a %s record and points to %s\n", $4,$5;}' <(dig "${SUBDOMAIN}.${DOMAIN}")
+
+elif [[ "$SUBDOMAIN" == "lb-01" ]]
+then
+   awk '{if(NR==13) printf "The subdomain lb-01 is a %s record and points to %s\n", $4,$5;}' <(dig "${SUBDOMAIN}.${DOMAIN}")
+
+elif [[ "$SUBDOMAIN" == "www" ]]
+then
+   awk '{if(NR==13) printf "The subdomain www is a %s record and points to %s\n", $4,$5;}' <(dig "${SUBDOMAIN}.${DOMAIN}") 
+fi
