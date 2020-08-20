@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#who is the actual user 
+user=$(whoami)
+echo "$user"
