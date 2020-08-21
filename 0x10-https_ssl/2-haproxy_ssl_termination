@@ -14,6 +14,7 @@ defaults
 frontend http_https
     bind :80
     bind :443 ssl crt /home/ubuntu/config/haproxy.pem alpn http/1.1,h2
+    http-request redirect scheme https code 301 if { ssl_fc }
     timeout client 60s
     mode http
     default_backend allservers
