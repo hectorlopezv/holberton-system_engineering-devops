@@ -1,0 +1,11 @@
+sudo ufw disable
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 8080/tcp
+sudo iptables -t nat -I PREROUTING -p tcp --dport 8080 -j REDIRECT --to-ports 80
+sudo iptables -t nat -I OUTPUT -p tcp -o lo --dport 8080 -j REDIRECT --to-ports 80
+sudo ufw enable
+sudo ufw status
