@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-import requests
-import json
 """consume data from api"""
 
 
 if __name__ == "__main__":
-
+    import requests
+    import json
     len_users = requests.get(
         'https://jsonplaceholder.typicode.com/users').json()
     users = [(el["username"], el["id"]) for el in len_users]

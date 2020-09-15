@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import requests
-import sys
-import csv
 """consume data from api"""
 
 
 if __name__ == "__main__":
+    import requests
+    import sys
+    import csv
     arg = sys.argv[1]
     userId_request = requests.get(
         'https://jsonplaceholder.typicode.com/users?id=' +
