@@ -1,21 +1,17 @@
 #!/usr/bin/env bash
-#double the number of server by adding x-serverd-by headers to identify which webserver is 
-apt update -y
-apt upgrade -y
-apt install haproxy -y
-cd ~
-mkdir config
-source cd config/
-echo "frontend http80
-    bind *:80
-    timeout client 60s
-    mode http
-    default_backend allservers
+# Install your load balancer
+sudo apt-get -y update
+sudo apt-get -y install haproxy
+sudo chown  $USER:$USER /etc/haproxy/haproxy.cfg
 
-backend allservers
-    timeout connect 10s
-    timeout server 1000s
+echo "
+frontend estebanweb
+    bind *:80
     mode http
-    server web-01 34.74.33.180:80
-    server web-01 34.224.32.83:80" >> config.cfg
-haproxy -D -f config.cfg
+    default_backend app
+backend app
+    balance roundrobin
+    server 1542-web-01 34.73.152.48:80 check
+    server 1542-web-02 	34.73.44.9:80 check" >> /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart
